@@ -53,19 +53,17 @@ class CJugadores {
       return count;
     }
 
-    mostrarJugadorAlto(){
-    let html= '';
-    for (const Jugadores of this.Jugadores) {
-        
-        if (Jugadores.Estatura>Jugadores.Estatura ) {
-            
-            html += `
-        ${Jugadores.Nombre}
-        ` 
-    }
-}
-    return html;
-}
+mostrarJugadorAlto() {
+        let max = 0;
+        let nombre = '';
+        for (const Jugadores of this.Jugadores) {
+          if (Jugadores.Estatura > max) {
+            max = Jugadores.Estatura;
+            nombre = Jugadores.Nombre;
+          }
+        }
+        return nombre;
+      }
 
 
   }
